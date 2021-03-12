@@ -1,0 +1,16 @@
+{
+  "name": "herbapower-project",
+  "version": "1.0.0",
+  "description": "Webshop Herbapower",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w1LuukSeepma/Herbapower.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w1LuukSeepma/Herbapower/issues"
+  },
+  "homepage": "https://github.com/w1LuukSeepma/Herbapower#readme"
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detail6.css">
+    <script src="../../javascript/navigatie.js" defer></script>
+    <script src="../../javascript/producten.js" defer></script>
+    <title>Winkel</title>
+</head>
+<body>
+    <div class="main">
+        <nav class="wrapper navigation">
+            <a href="../../index.html"><img class="logo logonav" src="../../images/Logo Herbapower.png"/></a>
+            <ul>
+                <li>
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../../winkel.html">Winkel</a>
+                </li>
+                <li>
+                    <a href="../../nieuwsoverzicht.html">Nieuws</a>
+                </li>
+                <li>
+                    <a href="../../contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="../../winkelmand.html">
+                        <div class="winkelwagen">
+                            <span id="winkelwagen__aantal"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="title">
+            Dumbell 20KG
+        </h1>
+        <div class="grid-container">
+            <div class="item">
+                <div class="item_image"></div>
+                <div class="item_wrapper">
+                    <div class="item_wrapper_nameandprice">
+                        <p id="dumbell20KG" class="name">Dumbell 20KG</p>
+                        <p id="dumbell20KG_Prijs" class="price">€39.99</p>
+                    </div>
+                    <div class="item_wrapper_itemnumber">
+                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
+                            <div class="item_wrapper_itemnumber_circle_minus"></div>
+                        </div>
+                        <p class="itemnumber" id="aantalDumbell20KG">0</p>
+                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
+                            <div class="item_wrapper_itemnumber_circle_plus1"></div>
+                            <div class="item_wrapper_itemnumber_circle_plus2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text">
+                <span>Omschrijving</span><br/>  
+                Deze dumbell is voor de echte kanjers! Als je een zwaargewicht bent kun je deze pas aan, deze dumbell is ideaal voor het trainen van de borst en benen! Dus wacht niet en koop deze toffe dumbell nu!!
+            </p>
+        </div>
+        <button class="gaterug"><a class="gaterugtext" href="../../winkel.html">Ga terug</a></button>
+        <button class="winkelmandje"><a class="gaterugtext2">Naar winkelmandje</a></button>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path class="waves" fill="#4ca289" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+
+        </path>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* fonts that are used on the website */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face 
+{
+    font-family: "Bold";
+    src: url("../fonts/Bold.ttf");
+    font-weight: 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face 
+{
+    font-family: "Regular";
+    src: url("../fonts/Regular.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}

@@ -1,0 +1,129 @@
+/*  Lettertypes inladen     */
+@font-face 
+{
+    font-family: "SailecBold";
+    src: url("../fonts/Bold.ttf");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: "SailecRegular";
+    src: url("../fonts/Regular.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*  Actieve websitepagina vet maken     */
+#winkelPagina nav ul>li:nth-child(2)>a, #contactPagina nav ul>li:nth-child(4)>a
+{
+    font-weight: 900;
+}
+
+/*  Titel webpagina     */
+.title
+{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'SailecBold';
+}
+
+/*  Navigatie CSS   */
+.wrapper
+{
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    transition: 300ms ease;
+    z-index: 200;
+    font-family: "SailecRegular";
+}
+
+.tinynav
+{
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    transition: 300ms ease;
+    z-index: 200;
+    font-family: "SailecRegular";
+}
+
+ul
+{
+    align-items: center;
+    display: flex;
+}
+
+li
+{
+    list-style: none;
+    margin: 0px 15px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo
+{
+    height: 85px;
+    width: auto;
+    transition: 300ms ease;
+}
+
+.tinylogo
+{
+    height: 55px;
+    width: auto;
+    transition: 300ms ease;
+}
+
+/* .winkelwagen
+{
+    height: 30px;
+    width: 30px;
+} */
+
+
+/* Winkelafbeelding stylen */
+.winkelwagen
+{
+    width: 2em;
+    height: 2em;
+    background-image: url('../images/winkelwagen.png');
+    background-size: contain; 
+    float: right;
+    margin-right: 3em;
+    position: relative;
+}
+
+/* Winkelwagen span (waar de aantallen in komen te staan) stylen */
+#winkelwagen__aantal:not(:empty)
+{
+    background-color: #f00;
+    display: inline-block;
+    color: #FFFFFF;
+    position: absolute;
+    top: -1em;
+    right: -1.5em;
+    line-height: .5em;
+    padding: .5em;
+    border-radius: 50%;
+}
