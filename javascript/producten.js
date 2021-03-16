@@ -1,30 +1,30 @@
-//function aantalAanWinkelwagenToevoegen()
-//{
-//    //Teller hoeveel producten er zijn geselecteerd
-//    var getal = 0;
-//    
-//    //Loopt door de session storage heen
-//    Object.keys(sessionStorage).forEach(function(key)
-//    {
-//        //Als de value van de key een Getal is
-//        if(sessionStorage.getItem(key) != "" && parseInt(sessionStorage.getItem(key)) >= 0)
-//        {
-//            //Het getal aan de variabelen optellen
-//            getal += parseInt(sessionStorage.getItem(key));
-//        }
-//    });
-//    
-//    //Voegt het aantal producten als getal aan de winkelwagen toe
-//    document.getElementById("winkelwagen__aantal").innerHTML = getal;
-//    
-//    //Als er geen gegevens in de winkelwagen zit, het getal weghalen
-//    if(getal == 0)
-//       document.getElementById("winkelwagen__aantal").style.display = "none";
-//    else
-//        document.getElementById("winkelwagen__aantal").style.display = "block";
-//}
-////Getal in winkelwagen aanpassen
-//aantalAanWinkelwagenToevoegen();
+function aantalAanWinkelwagenToevoegen()
+{
+   //Teller hoeveel producten er zijn geselecteerd
+   var getal = 0;
+   
+   //Loopt door de session storage heen
+   Object.keys(sessionStorage).forEach(function(key)
+   {
+       //Als de value van de key een Getal is
+       if(sessionStorage.getItem(key) != "" && parseInt(sessionStorage.getItem(key)) >= 0)
+       {
+           //Het getal aan de variabelen optellen
+           getal += parseInt(sessionStorage.getItem(key));
+       }
+   });
+   
+   //Voegt het aantal producten als getal aan de winkelwagen toe
+   document.getElementById("winkelwagen__aantal").innerHTML = getal;
+   
+   //Als er geen gegevens in de winkelwagen zit, het getal weghalen
+   if(getal == 0)
+      document.getElementById("winkelwagen__aantal").style.display = "none";
+   else
+       document.getElementById("winkelwagen__aantal").style.display = "block";
+}
+//Getal in winkelwagen aanpassen
+aantalAanWinkelwagenToevoegen();
 
 
 function productenLaden()
@@ -135,6 +135,9 @@ function productenToevoegen(afbeelding, product, aantal, prijs)
     productToevoegen(afbeelding, product.innerText, aantal.id, prijs.innerText);
 
     aantalAanWinkelwagenToevoegen();
+
+    //Wordt uitgevoerd om de kosten incl. én excl. BTW én het totaal bedrag opnieuw te berekenen
+    alleKosten();
 }
 
 function productToevoegen(afbeelding, product, aantal, prijs)
@@ -171,6 +174,9 @@ function productenVerlagen(afbeelding, product, aantal, prijs)
     productVerlagen(afbeelding, product.innerText, aantal.id, prijs.innerText);
 
     aantalAanWinkelwagenToevoegen();
+
+    //Wordt uitgevoerd om de kosten incl. én excl. BTW én het totaal bedrag opnieuw te berekenen
+    alleKosten();
 }
 
 function productVerlagen(afbeelding, product, aantal, prijs)

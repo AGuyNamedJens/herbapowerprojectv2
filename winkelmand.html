@@ -5,31 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Icon -->
-        <link href="./images/icon.jpg" rel="icon">
+        <link href="images/icon.jpg" rel="icon">
         <script src="./javascript/navigatie.js" defer=""></script>
         <!-- Menu CSS -->
-        <link href="./css/navigatie.css" type="text/css" rel="stylesheet">
+        <link href="css/navigatie.css" type="text/css" rel="stylesheet">
         <!-- Winkelmandje CSS -->
-        <link href="./css/winkelmand.css" type="text/css" rel="stylesheet">
+        <link href="css/winkelmand.css" type="text/css" rel="stylesheet">
         <!-- Producten toevoegen / verwijderen -->
-        <script src="./javascript/producten.js" defer></script>
-        <title>Winkelmand</title>
+        <script src="javascript/producten.js" defer></script>
+        <script src="javascript/winkelmand.js" defer></script>
+        <title>Winkelmand | Webshop HerbaPower</title>
     </head>
-    <body>
+    <body id="winkelmand">
         <nav class="wrapper navigation">
             <a href="./index.html"><img class="logo logonav" src="./images/Logo Herbapower.png"/></a>
             <ul>
                 <li>
-                    <a href="./index.html">Home</a>
+                    <a href="/index.html">Home</a>
                 </li>
                 <li>
-                    <a href="./winkel.html">Winkel</a>
+                    <a href="/winkel.html">Winkel</a>
                 </li>
                 <li>
-                    <a href="./nieuwsoverzicht.html">Nieuws</a>
+                    <a href="#">Nieuws</a>
                 </li>
                 <li>
-                    <a href="./contact.html">Contact</a>
+                    <a href="/contact.html">Contact</a>
                 </li>
                 <li>
                     <a href="/winkelmand.html">
@@ -41,8 +42,129 @@
             </ul>
         </nav>
         <!-- Titel -->
-        <h1>
+        <h1 class="titel">
             Winkelmandje
         </h1>
+
+        <section id="winkelmandLeeg">
+            <h1 id="leeg">
+
+            </h1>
+            <p id="instructie">
+                
+            </p>
+        </section>
+
+        <section id="winkelmand">
+
+        </section>
+
+
+        <section id="Sportbidon">
+        </section>
+
+        <section id="Fitbit">
+        </section>
+
+        <section id="Dumbell 5KG">
+        </section>
+
+        <section id="Dumbell 10KG">           
+        </section>
+
+        <section id="Dumbell 15KG">
+        </section>
+
+        <section id="Dumbell 20KG">
+        </section>
+
+        <section id="Sporttas">
+        </section>
+
+        <section id="Protein Shake">
+        </section>
+
+        <section id="Nutrition Bar">
+        </section>
+
+        <section id="Handdoek">
+        </section>
+
+        <section id="Oortjes">
+        </section>
+
+        <section id="Koptelefoon">
+        </section>
+        
+        <section id="Sportschoen">
+        </section>
+
+        <section id="Sportbroek">
+        </section>
+
+        <section id="Sportshirt">
+        </section>
+
+        <section id="Sportdrank">
+        </section>
+
+
+        <section id="vulKortingscode">
+            <h1>
+                Kortingscode
+            </h1>
+            <input type="text" id="kortingscode" placeholder="Vul hier uw kortingscode in:"><br><br>
+            <input type="button" id="checkKortingscode" onclick="kortingBerekenen(kortingscode)" value="Verzenden"><br><br>
+            <label id="randomGetal"></label><br><br>
+        </section>
+
+
+        <table id="kostenOverzicht">
+            <tr>
+                <td>
+                    Inclusief BTW:
+                </td>
+                <td>
+                    <label id="inclusiefBTW"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Exclusief BTW:
+                </td>
+                <td id="exclusiefBTW"></td>
+            </tr>
+            <tr>
+                <td>
+                    Verzendkosten:
+                </td>
+                <td id="verzendKosten"></td>
+            </tr>
+            <tr>
+                <td>
+                    Korting:
+                </td>
+                <td id="korting"></td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Totaal
+                </td>
+                <td id="totaleKosten"></td>
+            </tr>
+        </table>
+
+<!--        <footer id="footer">-->
+            <svg id="footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="waves" fill="#4ca289" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+<!--        </footer>-->
+
     </body>
 </html>
