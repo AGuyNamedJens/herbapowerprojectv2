@@ -31,6 +31,10 @@ function formulier()
         document.getElementById("tabel").innerHTML += "<tr><td>Telefoonnummer</td><td>" + this.mobielNummer + "</td></tr>";
         document.getElementById("tabel").innerHTML += "<tr><td>Vraag en opmerking</td><td>" + this.vraag + "</td></tr>";
         document.getElementById("tabel").innerHTML += "<tr><td>Aanmelden nieuwsbrief</td><td>" + this.nieuwsbrief + "</td></tr>";
+    
+        //Footer stylen
+        document.getElementById("footer").style.position = "absolute";
+        document.getElementById("footer").style.bottom = "-150px";    
     } 
 }
 

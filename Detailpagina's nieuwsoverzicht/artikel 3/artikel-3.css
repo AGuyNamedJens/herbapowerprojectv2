@@ -105,11 +105,33 @@ a
     transition: 300ms ease;
 }
 
-.winkelwagenß
+.winkelwagen
 {
-    height: 30px;
-    width: 30px;
+    width: 2em;
+    height: 2em;
+    background-image: url('../../images/winkelwagen.png');
+    background-size: contain; 
+    float: right;
+    margin-right: 3em;
+    position: relative;
 }
+
+/* Winkelwagen span (waar de aantallen in komen te staan) stylen */
+#winkelwagen__aantal:not(:empty)
+{
+    background-color: #4CA289;
+    display: inline-block;
+    color: #FFFFFF;
+    position: absolute;
+    top: -1em;
+    right: -1.5em;
+    line-height: .5em;
+    padding: .5em;
+    border-radius: 50%;
+    font-family: SailecRegular;
+    font-size: 16px;
+}
+
 .header .title {
     font-size: 4.375rem;
     text-align: center;
@@ -136,6 +158,9 @@ a
     margin-left: auto;
     margin-top: 60px;
     margin-right: auto;
+}
+.footer svg {
+    vertical-align: bottom;
 }
 .waves
 {
@@ -186,5 +211,32 @@ a
     100%
     {
         d: path("M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,122.7C672,128,768,160,864,144C960,128,1056,64,1152,53.3C1248,43,1344,85,1392,106.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z");
+    }
+}
+@media(max-width: 1200px)
+{
+    .grid-container-block
+    {
+        grid-template-columns: repeat(2,300px);
+        justify-content: center;
+    }
+}
+@media(max-width: 950px)
+{
+    .title {
+        font-size: 40px !important;
+    }
+    .article-block-image > img {
+        height: auto;
+    }
+    .article-block-text {
+        width: auto;
+    }
+    .article-block-text h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .article-block-text p {
+        font-size: 16px;
     }
 }
