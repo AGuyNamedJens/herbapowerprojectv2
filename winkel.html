@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,14 @@
     <script src="./javascript/navigatie.js" defer></script>
     <script src="./javascript/producten.js" defer></script>
     <script src="./javascript/winkelmand.js" defer></script>
+    <script src="javascript/nav.js" defer></script>
     <title>Winkel</title>
 </head>
+
 <body>
     <div class="main">
         <nav class="wrapper navigation">
-            <a href="./index.html"><img class="logo logonav" src="./images/Logo Herbapower.png"/></a>
+            <a href="./index.html"><img class="logo logonav" src="./images/Logo Herbapower.png" /></a>
             <ul>
                 <li>
                     <a href="../../index.html">Home</a>
@@ -35,6 +38,11 @@
                     </a>
                 </li>
             </ul>
+            <div onclick="toggleNav(); Navcolor(); " class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </nav>
         <h1 class="title">
             Komt u lekker bij ons winkelen?
@@ -50,11 +58,13 @@
                         <p id="sportbidon_Prijs" class="price">€19.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Sportbidon.jpg', sportbidon, aantalSportbidon, sportbidon_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Sportbidon.jpg', sportbidon, aantalSportbidon, sportbidon_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSportbidon">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Sportbidon.jpg', sportbidon, aantalSportbidon, sportbidon_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Sportbidon.jpg', sportbidon, aantalSportbidon, sportbidon_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -71,11 +81,13 @@
                         <p id="fitbit_Prijs" class="price">€159.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Fitbit.jpg', fitbit, aantalFitbit, fitbit_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Fitbit.jpg', fitbit, aantalFitbit, fitbit_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalFitbit">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Fitbit.jpg', fitbit, aantalFitbit, fitbit_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Fitbit.jpg', fitbit, aantalFitbit, fitbit_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -92,11 +104,13 @@
                         <p id="dumbell5KG_Prijs" class="price">€14.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Dumbell5kg.jpg', dumbell5KG, aantalDumbell5KG, dumbell5KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Dumbell5kg.jpg', dumbell5KG, aantalDumbell5KG, dumbell5KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalDumbell5KG">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Dumbell5kg.jpg', dumbell5KG, aantalDumbell5KG, dumbell5KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Dumbell5kg.jpg', dumbell5KG, aantalDumbell5KG, dumbell5KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -113,11 +127,13 @@
                         <p id="dumbell10KG_Prijs" class="price">€19.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Dumbell10kg.jpg', dumbell10KG, aantalDumbell10KG, dumbell10KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Dumbell10kg.jpg', dumbell10KG, aantalDumbell10KG, dumbell10KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalDumbell10KG">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Dumbell10kg.jpg', dumbell10KG, aantalDumbell10KG, dumbell10KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Dumbell10kg.jpg', dumbell10KG, aantalDumbell10KG, dumbell10KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -134,11 +150,13 @@
                         <p id="dumbell15KG_Prijs" class="price">€29.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Dumbell15kg.jpg', dumbell15KG, aantalDumbell15KG, dumbell15KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Dumbell15kg.jpg', dumbell15KG, aantalDumbell15KG, dumbell15KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalDumbell15KG">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Dumbell15kg.jpg', dumbell15KG, aantalDumbell15KG, dumbell15KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Dumbell15kg.jpg', dumbell15KG, aantalDumbell15KG, dumbell15KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -155,11 +173,13 @@
                         <p id="dumbell20KG_Prijs" class="price">€39.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalDumbell20KG">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Dumbell20kg.jpg', dumbell20KG, aantalDumbell20KG, dumbell20KG_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -176,11 +196,13 @@
                         <p id="sporttas_Prijs" class="price">€19.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Sporttas.jpg', sporttas, aantalSporttas, sporttas_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Sporttas.jpg', sporttas, aantalSporttas, sporttas_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSporttas">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Sporttas.jpg', sporttas, aantalSporttas, sporttas_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Sporttas.jpg', sporttas, aantalSporttas, sporttas_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -197,11 +219,13 @@
                         <p id="proteinShake_Prijs" class="price">€8.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Proteinshake.jpg', proteinShake, aantalProteinShake, proteinShake_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Proteinshake.jpg', proteinShake, aantalProteinShake, proteinShake_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalProteinShake">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Proteinshake.jpg', proteinShake, aantalProteinShake, proteinShake_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Proteinshake.jpg', proteinShake, aantalProteinShake, proteinShake_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -218,11 +242,13 @@
                         <p id="nutritionBar_Prijs" class="price">€1.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Nutritionbar.jpg', nutritionBar, aantalNutritionBar, nutritionBar_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Nutritionbar.jpg', nutritionBar, aantalNutritionBar, nutritionBar_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalNutritionBar">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Nutritionbar.jpg', nutritionBar, aantalNutritionBar, nutritionBar_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Nutritionbar.jpg', nutritionBar, aantalNutritionBar, nutritionBar_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -239,11 +265,13 @@
                         <p id="handdoek_Prijs" class="price">€3.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/handdoek.jpg', handdoek, aantalHanddoek, handdoek_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/handdoek.jpg', handdoek, aantalHanddoek, handdoek_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalHanddoek">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/handdoek.jpg', handdoek, aantalHanddoek, handdoek_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/handdoek.jpg', handdoek, aantalHanddoek, handdoek_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -260,11 +288,13 @@
                         <p id="oortjes_Prijs" class="price">€160</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/oortjes.jpg', oortjes, aantalOortjes, oortjes_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/oortjes.jpg', oortjes, aantalOortjes, oortjes_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalOortjes">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/oortjes.jpg', oortjes, aantalOortjes, oortjes_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/oortjes.jpg', oortjes, aantalOortjes, oortjes_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -281,11 +311,13 @@
                         <p id="koptelefoon_Prijs" class="price">€600</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Koptelefoon.jpg', koptelefoon, aantalKoptelefoons, koptelefoon_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Koptelefoon.jpg', koptelefoon, aantalKoptelefoons, koptelefoon_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalKoptelefoons">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Koptelefoon.jpg', koptelefoon, aantalKoptelefoons, koptelefoon_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Koptelefoon.jpg', koptelefoon, aantalKoptelefoons, koptelefoon_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -302,11 +334,13 @@
                         <p id="sportschoen_Prijs" class="price">€59.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Sportschoenen.jpg', sportschoen, aantalSportschoenen, sportschoen_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Sportschoenen.jpg', sportschoen, aantalSportschoenen, sportschoen_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSportschoenen">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Sportschoenen.jpg', sportschoen, aantalSportschoenen, sportschoen_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Sportschoenen.jpg', sportschoen, aantalSportschoenen, sportschoen_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -323,11 +357,13 @@
                         <p id="sportbroek_Prijs" class="price">€39.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Sportbroek.jpg', sportbroek, aantalSportbroeken, sportbroek_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Sportbroek.jpg', sportbroek, aantalSportbroeken, sportbroek_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSportbroeken">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Sportbroek.jpg', sportbroek, aantalSportbroeken, sportbroek_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Sportbroek.jpg', sportbroek, aantalSportbroeken, sportbroek_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -344,11 +380,13 @@
                         <p id="sportshirt_Prijs" class="price">€19.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/Sportshirt.jpg', sportshirt, aantalSportshirts, sportshirt_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/Sportshirt.jpg', sportshirt, aantalSportshirts, sportshirt_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSportshirts">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/Sportshirt.jpg', sportshirt, aantalSportshirts, sportshirt_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/Sportshirt.jpg', sportshirt, aantalSportshirts, sportshirt_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -365,11 +403,13 @@
                         <p id="sportdrank_Prijs" class="price">€4.99</p>
                     </div>
                     <div class="item_wrapper_itemnumber">
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenVerlagen('/images/drinken.jpg', sportdrank, aantalSportdrank, sportdrank_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenVerlagen('/images/drinken.jpg', sportdrank, aantalSportdrank, sportdrank_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_minus"></div>
                         </div>
                         <p class="itemnumber" id="aantalSportdrank">0</p>
-                        <div class="item_wrapper_itemnumber_circle" onclick="productenToevoegen('/images/drinken.jpg', sportdrank, aantalSportdrank, sportdrank_Prijs)">
+                        <div class="item_wrapper_itemnumber_circle"
+                            onclick="productenToevoegen('/images/drinken.jpg', sportdrank, aantalSportdrank, sportdrank_Prijs)">
                             <div class="item_wrapper_itemnumber_circle_plus1"></div>
                             <div class="item_wrapper_itemnumber_circle_plus2"></div>
                         </div>
@@ -378,10 +418,12 @@
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path class="waves" fill="#4ca289" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            <path class="waves" fill="#4ca289" fill-opacity="1"
+                d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
 
             </path>
         </svg>
-    </div> 
+    </div>
 </body>
+
 </html>

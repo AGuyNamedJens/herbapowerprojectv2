@@ -1,123 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./css/navigatie.css" type="text/css" rel="stylesheet">
-        <link href="./css/contact.css" type="text/css" rel="stylesheet">
-        <link rel="icon" href="images/Logo Herbapower.png">
-        <script src="javascript/navigatie.js" defer></script>
-        <script src="javascript/contact.js" defer></script>
-        <script src="javascript/producten.js" defer></script>
-        <title>Contact</title>
-    </head>
-    <body>
-        <nav class="wrapper navigation">
-            <a href="../index.html"><img class="logo logonav" src="../../images/Logo Herbapower.png"/></a>
-            <ul>
-                <li>
-                    <a href="./index.html">Home</a>
-                </li>
-                <li>
-                    <a href="./winkel.html">Winkel</a>
-                </li>
-                <li>
-                    <a href="./nieuwsoverzicht.html">Nieuws</a>
-                </li>
-                <li>
-                    <a href="./contact.html"><strong>Contact</strong></a>
-                </li>
-                <li>
-                    <a href="./winkelmand.html">
-                        <div class="winkelwagen">
-                            <span id="winkelwagen__aantal"></span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <form action="#" id="form">
-            <h1>
-                Contact
-            </h1>
-            <fieldset>      
-                <p>
-                    <label>Wat is uw geslacht?*</label>
-                </p>
 
-                <!-- Geslacht -->
-                <div class="radio-group">
-                    <label class="radio">
-                        <input type="radio" name="geslacht" id="man" value="man" required>
-                        Man
-                        <span></span>
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="geslacht" id="man" value="vrouw" required>
-                        Vrouw
-                        <span></span>
-                    </label>
-                </div>
-                <!-- Naam -->
-                <p>
-                    <label for="naam">Naam*</label>
-                </p>
-                <p>
-                    <input type="text" name="naam" id="naam" placeholder="Wat is uw naam?" required>
-                </p>
-                
-                <!-- E-mailadres -->
-                <p>
-                    <label for="e-mailadres">E-mailadres*</label>
-                </p>
-                <p>
-                    <input type="text" name="e-mailadres" id="e-mailadres" placeholder="example@gmail.com" pattern="[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-z]{2,}" required>
-                </p>                        
-    
-                <!-- Telefoonnummer -->
-                <p>
-                    <label for="telefoonnummer">Telefoonnummer*</label>
-                </p>
-                <p>
-                    <input type="text" name="telefoonnummer" id="telefoonnummer" placeholder="06-12345678" pattern="([0-9]{2}[-]+[0-9]{8}|([0-9]{4}[-][0-9]{6})|([0-9]{3}[-][0-9]{7}))" required>
-                </p>
-    
-                <!-- Vraag & opmerking-->
-                <p>
-                    <label for="opmerking">Vraag en opmerking*</label>
-                </p>
-                <p>
-                    <textarea name="opmerking" id="opmerking" placeholder="Waar heeft u een vraag over?" required></textarea>
-                </p>
-                
-                <!-- Aanmelden nieuwsbrief -->
-                <p>
-                    <input type="checkbox" name="aanmeldenNieuwsbrief" id="nieuwsbrief">
-                    <!--Lege label. Wordt in CSS gestyled als een vierkant-->
-                    <label for="nieuwsbrief"></label>
-                    <label for="nieuwsbrief">Wilt u zich aanmelden voor de nieuwsbrief?</label>
-                </p>
-    
-                <!-- Verzenden button -->
-                <p>
-                    <input type="submit" id="verzenden" onclick="formulier()">
-                </p>
-            </fieldset>          
-            
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/navigatie.css" type="text/css" rel="stylesheet">
+    <link href="./css/contact.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="images/Logo Herbapower.png">
+    <script src="javascript/navigatie.js" defer></script>
+    <script src="javascript/contact.js" defer></script>
+    <script src="javascript/producten.js" defer></script>
+    <script src="javascript/nav.js" defer></script>
+    <title>Contact</title>
+</head>
 
-        <!-- Wordt zichtbaar als het formulier is verzonden -->
-        <h1 id="bedanktBericht">
-
+<body>
+    <nav class="wrapper navigation">
+        <a href="../index.html"><img class="logo logonav" src="../../images/Logo Herbapower.png" /></a>
+        <ul>
+            <li>
+                <a href="./index.html">Home</a>
+            </li>
+            <li>
+                <a href="./winkel.html">Winkel</a>
+            </li>
+            <li>
+                <a href="./nieuwsoverzicht.html">Nieuws</a>
+            </li>
+            <li>
+                <a href="./contact.html"><strong>Contact</strong></a>
+            </li>
+            <li>
+                <a href="./winkelmand.html">
+                    <div class="winkelwagen">
+                        <span id="winkelwagen__aantal"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <div onclick="toggleNav(); Navcolor(); " class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <form action="#" id="form">
+        <h1>
+            Contact
         </h1>
-        <table>
-            <tbody id="tabel"></tbody>
-        </table>
-        
-        <svg id="footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path class="waves" fill="#4ca289" fill-opacity="1" d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-            </path>
-        </svg>
-    </body>
+        <fieldset>
+            <p>
+                <label>Wat is uw geslacht?*</label>
+            </p>
+
+            <!-- Geslacht -->
+            <div class="radio-group">
+                <label class="radio">
+                    <input type="radio" name="geslacht" id="man" value="man" required>
+                    Man
+                    <span></span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="geslacht" id="man" value="vrouw" required>
+                    Vrouw
+                    <span></span>
+                </label>
+            </div>
+            <!-- Naam -->
+            <p>
+                <label for="naam">Naam*</label>
+            </p>
+            <p>
+                <input type="text" name="naam" id="naam" placeholder="Wat is uw naam?" required>
+            </p>
+
+            <!-- E-mailadres -->
+            <p>
+                <label for="e-mailadres">E-mailadres*</label>
+            </p>
+            <p>
+                <input type="text" name="e-mailadres" id="e-mailadres" placeholder="example@gmail.com"
+                    pattern="[a-zA-Z0-9]+[@]+[a-zA-Z0-9]+[.]+[a-z]{2,}" required>
+            </p>
+
+            <!-- Telefoonnummer -->
+            <p>
+                <label for="telefoonnummer">Telefoonnummer*</label>
+            </p>
+            <p>
+                <input type="text" name="telefoonnummer" id="telefoonnummer" placeholder="06-12345678"
+                    pattern="([0-9]{2}[-]+[0-9]{8}|([0-9]{4}[-][0-9]{6})|([0-9]{3}[-][0-9]{7}))" required>
+            </p>
+
+            <!-- Vraag & opmerking-->
+            <p>
+                <label for="opmerking">Vraag en opmerking*</label>
+            </p>
+            <p>
+                <textarea name="opmerking" id="opmerking" placeholder="Waar heeft u een vraag over?"
+                    required></textarea>
+            </p>
+
+            <!-- Aanmelden nieuwsbrief -->
+            <p>
+                <input type="checkbox" name="aanmeldenNieuwsbrief" id="nieuwsbrief">
+                <!--Lege label. Wordt in CSS gestyled als een vierkant-->
+                <label for="nieuwsbrief"></label>
+                <label for="nieuwsbrief">Wilt u zich aanmelden voor de nieuwsbrief?</label>
+            </p>
+
+            <!-- Verzenden button -->
+            <p>
+                <input type="submit" id="verzenden" onclick="formulier()">
+            </p>
+        </fieldset>
+
+    </form>
+
+    <!-- Wordt zichtbaar als het formulier is verzonden -->
+    <h1 id="bedanktBericht">
+
+    </h1>
+    <table>
+        <tbody id="tabel"></tbody>
+    </table>
+
+    <svg id="footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path class="waves" fill="#4ca289" fill-opacity="1"
+            d="M0,160L48,165.3C96,171,192,181,288,160C384,139,480,85,576,106.7C672,128,768,224,864,218.7C960,213,1056,107,1152,80C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+</body>
+
 </html>
